@@ -2,15 +2,20 @@ import socket
 
 # Servidor iniciado en localhost
 HOST = '127.0.0.1'
-PORT = 5001
+PORT = 5000
 BUFFER_SIZE = 1024 # Tamaño del buffer para recibir datos
 
 # Creamos un socket, para el protocolo TCP utilizamos:
 # AF_INET: IPv4, SOCK_STREAM: TCP
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# Enlazamos el socket al host y puerto
-server_socket.bind((HOST, PORT))
+try:
+    # Enlazamos el socket al host y puerto
+    server_socket.bind((HOST, PORT))
+except socket.error as e:
+    print(f"Error al enlazar el socket: {e}")
+    server_socket.close()
+    exit(1)
 
 # Escuchamos conexiones entrantes
 server_socket.listen()
