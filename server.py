@@ -17,9 +17,6 @@ except socket.error as e:
     server_socket.close()
     exit(1)
 
-# Enlazamos el socket al host y puerto
-server_socket.bind((HOST, PORT))
-
 # Escuchamos conexiones entrantes
 server_socket.listen()
 print(f"Servidor iniciado en {HOST}:{PORT}")
