@@ -28,7 +28,7 @@ Creación de un servidor TCP que interactúe con un cliente
 ## Salir de la conexión
 1. En la terminal del cliente, ingresar el mensaje "DESCONEXION" y presionar Enter.
 2. Verificar que la conexión se cierra correctamente en ambos lados.
-3. El servidor imprime un mensjae indicando que el cliente se ha desconectado.
+3. El servidor imprime un mensaje indicando que el cliente se ha desconectado.
 4. De igual manera el cliente cierra la conexión y muestra un mensaje que la conexión se ha cerrado.
 
 ### Reconectar cliente
